@@ -14,8 +14,12 @@ const Home: NextPage = () => {
   //   func();
   // }, []);
 
-  const a = { b: "テスト" };
-  console.log(a.c);
+  interface MyInterface {
+    name: string | undefined;
+  }
+
+  const a: MyInterface | undefined = undefined;
+  console.log(a!.name);
 
   return (
     <div className={styles.container}>
