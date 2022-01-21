@@ -6,20 +6,16 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   // 「Unhandled error」の場合
-  // React.useEffect(() => {
-  //   const func = async () => {
-  //     const res = await fetch("http://localhost:3001");
-  //     console.log(res);
-  //   };
-  //   func();
-  // }, []);
-
-  interface MyInterface {
-    name: string | undefined;
-  }
-
-  const a: MyInterface | undefined = undefined;
-  console.log(a!.name);
+  React.useEffect(() => {
+    const func = async () => {
+      try {
+        const res = await fetch("http://localhost:3001");
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    func();
+  }, []);
 
   return (
     <div className={styles.container}>
