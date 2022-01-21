@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import LayoutErrorBoundary from "./layout/LayoutErrorBoundary";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <LayoutErrorBoundary>
+      <Component {...pageProps} />
+    </LayoutErrorBoundary>
+  );
 }
 
-export default MyApp
+export default MyApp;

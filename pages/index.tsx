@@ -7,15 +7,22 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   // 「Unhandled error」の場合
   React.useEffect(() => {
+    // const res = fetch("http://localhost:3001");
     const func = async () => {
       try {
         const res = await fetch("http://localhost:3001");
+        // const a = { b: "あいう" };
+        // console.log(a.c.toString());
       } catch (error) {
         console.error(error);
+        // throw new Error("");
       }
     };
     func();
   }, []);
+
+  // const a = { b: "あいう" };
+  // console.log(a.c.toString());
 
   return (
     <div className={styles.container}>
