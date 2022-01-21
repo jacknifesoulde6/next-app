@@ -10,9 +10,10 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   // try {
-  const a = { b: "fajiga" };
-  console.log(a.c.toString());
-  res.status(500).json({ name: "John Doe" });
+  // const a = { b: "fajiga" };
+  // console.log(a.c.toString());
+  res.status(500);
+  res.json({ name: "John Doe" });
   // } catch (e) {
   //   res.status(500);
   // }
