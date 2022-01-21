@@ -10,7 +10,10 @@ const Home: NextPage = () => {
     // const res = fetch("http://localhost:3001");
     const func = async () => {
       try {
-        const res = await fetch("http://localhost:3001");
+        const res = await fetch(
+          "https://next-app-three-rose.vercel.app/api/hello"
+        );
+        console.log(res);
         // const a = { b: "あいう" };
         // console.log(a.c.toString());
       } catch (error) {
