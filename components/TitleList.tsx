@@ -6,19 +6,20 @@ export const TitleList = () => {
   React.useEffect(() => {
     // const res = fetch("http://localhost:3001");
     const func = async () => {
-      try {
-        // const res = await fetch("http://localhost:3000/api/hello");
-        const res = await fetch(
-          "https://next-app-three-rose.vercel.app/api/hello"
-        );
-        console.log(res);
-        // const a = { b: "あいう" };
-        // console.log(a.c.toString());
-      } catch (error) {
-        console.error(error);
-        // throw new Error("");
-      }
+      //   try {
+      const res = await fetch("http://localhost:3001");
+      // const res = await fetch(
+      //   "https://next-app-three-rose.vercel.app/api/hello"
+      // );
+      console.log(res);
+      // const a = { b: "あいう" };
+      // console.log(a.c.toString());
+      //   } catch (error) {
+      //     console.error(error);
+      //     // throw new Error("");
+      //   }
     };
+    const res = fetch("http://localhost:3001");
     func();
   }, []);
 
