@@ -14,8 +14,8 @@ const Home: NextPage = () => {
   //   func();
   // }, []);
 
-  // 「ビルドエラー」の場合
-  const a = 1 + ;
+  const a = { b: "テスト" };
+  console.log(a.c);
 
   return (
     <div className={styles.container}>
