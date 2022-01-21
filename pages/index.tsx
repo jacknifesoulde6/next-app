@@ -5,13 +5,17 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  React.useEffect(() => {
-    const func = async () => {
-      const res = await fetch("http://localhost:3001");
-      console.log(res);
-    };
-    func();
-  }, []);
+  // 「Unhandled error」の場合
+  // React.useEffect(() => {
+  //   const func = async () => {
+  //     const res = await fetch("http://localhost:3001");
+  //     console.log(res);
+  //   };
+  //   func();
+  // }, []);
+
+  // 「ビルドエラー」の場合
+  const a = 1 + ;
 
   return (
     <div className={styles.container}>
